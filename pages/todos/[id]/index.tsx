@@ -43,7 +43,13 @@ const TodoDetail = () => {
       <div className="flex flex-col space-y-6 w-3/4 max-w-lg pt-10">
         <label className="block text-xl font-bold text-gray-700">Todo</label>
         <Todo todo={todo} />
-        <div className="flex justyfy-end">
+        <div className="flex justify-end">
+          <Link
+            href={`/todos/${id}/edit`}
+            className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none mr-12"
+          >
+            Edit
+          </Link>
           <Link
             href="/"
             className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none"
@@ -53,7 +59,7 @@ const TodoDetail = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default TodoDetail;
